@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [320 and Up](http://stuffandnonsense.co.uk/projects/320andup/)
 =================
 
@@ -39,3 +40,9 @@ Authors
 + http://twitter.com/jina
 + http://github.com/jina
 + http://sushiandrobots.com
+=======
+320andupC5
+==========
+
+320 and up theme for C5
+>>>>>>> 837f36a3bb591bd56551c0fad73e1965f35eb95f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 .sass-cache
 /.esproj/
@@ -5,3 +6,7 @@
 /Icon
 .DS_Store
 *.espressostorage
+=======
+config/site.php
+files/cache/*
+>>>>>>> 837f36a3bb591bd56551c0fad73e1965f35eb95f
