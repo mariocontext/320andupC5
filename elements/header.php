@@ -23,6 +23,8 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 
+<link rel="shortcut icon" href="<?php  echo $this->getThemePath(); ?>/favicon.ico">
+
 <!-- Site Header Content //-->
 
 <link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/320andup-scss-compass.css" />

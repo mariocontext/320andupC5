@@ -4,9 +4,11 @@ $this->inc('elements/header.php');
 $nav = Loader::helper('navigation');
 ?>
 
+<div id="general-content" class="content clearfix">
+
 	<div id="header-image">
 		
-		<div class="grid_24 alpha omega" id="featured-image-full">
+		<div id="featured-image-full">
 			<?php 
 			
 			if ($c->isEditMode()) {
@@ -15,13 +17,13 @@ $nav = Loader::helper('navigation');
 				$a->display($c);
 			}
 			?>
-		</div>
+		</div><!-- /featured-image-full -->
 		
-	</div>
-	
-	<div class="clear"></div>
+	</div><!-- /header-image -->
 
-	<div id="left-sidebar-container" class="grid_8">
+	
+
+	<div id="left-sidebar-container" class="clearfix">
 
 		<div id="left-sidebar-inner">
 		
@@ -30,11 +32,11 @@ $nav = Loader::helper('navigation');
 			$a->display($c);
 			?>
 			
-		</div>
+		</div><!-- /left-sidebar-inner -->
 	
-	</div>
+	</div><!-- /left-sidebar-inner -->
 
-	<div id="main-content-container" class="grid_16">
+	<div id="main-content-container">
 		<div id="main-content-inner">
 		
 			<h1><?php  echo $c->getCollectionName(); ?></h1>
@@ -65,20 +67,22 @@ $nav = Loader::helper('navigation');
 						<a href="https://twitter.com/share"><img class="main-content-post-footer-share-twitter" src="<?php  echo $this->getThemePath(); ?>/images/icon_twitter.png" alt="Share on Twitter" /></a>
 						<a href="http://www.facebook.com/share.php?u=<?php  echo $nav->getLinkToCollection($c, true); ?>"><img class="main-content-post-footer-share-facebook" src="<?php  echo $this->getThemePath(); ?>/images/icon_facebook.png" alt="Share on Facebook" /></a>
 						</p>
-					</div>
+					</div><!-- /main-content-post-footer-share -->
 				</p>	
-			</div>
+			</div><!-- /main-content-post-author -->
 			
-		</div>
+		</div><!-- /main-content-inner -->
 	
-	</div>
+	</div><!-- /main-content-container -->
+
+</div><!-- /general-content -->
+
 	
 <?php  if(isset($print) && $print) { ?>
 <script type="text/javascript">
 $(function(){ window.print(); });
 </script>
 <?php  } ?>
-	
-	<!-- end main content columns -->
+
 	
 <?php  $this->inc('elements/footer.php'); ?>

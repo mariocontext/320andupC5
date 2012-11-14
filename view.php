@@ -1,17 +1,21 @@
 <?php  
 defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php'); ?>
+	
+<!-- Row -->
+<div id="general-content" class="grids grids-one content clearfix">
 
-	<div class="clear"></div>
-
-	<div id="main-content-container" class="grid_24">
+	<div id="main-content-container" class="grid grid-1">
 		<div id="main-content-inner">
+		
 			<?php  print $innerContent; ?>
 			
-		</div>
+		</div><!-- /main-content-inner -->
 	
-	</div>
+	</div><!-- /main-content-container -->
 	
-	<!-- end full width content area -->
+
+</div><!-- /general-content -->
+<!-- Row -->
 	
 <?php  $this->inc('elements/footer.php'); ?>
