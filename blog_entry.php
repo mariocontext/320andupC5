@@ -4,8 +4,6 @@ $this->inc('elements/header.php');
 $nav = Loader::helper('navigation');
 ?>
 
-<div id="general-content" class="content clearfix">
-
 	<div id="header-image">
 		
 		<div id="featured-image-full">
@@ -21,9 +19,11 @@ $nav = Loader::helper('navigation');
 		
 	</div><!-- /header-image -->
 
-	
+<!-- Row -->
 
-	<div id="left-sidebar-container" class="clearfix">
+<div id="general-content" class="grids grids-two content clearfix">
+
+	<div id="left-sidebar-container" class="grid grid-1">
 
 		<div id="left-sidebar-inner">
 		
@@ -34,9 +34,9 @@ $nav = Loader::helper('navigation');
 			
 		</div><!-- /left-sidebar-inner -->
 	
-	</div><!-- /left-sidebar-inner -->
+	</div><!-- /left-sidebar-container -->
 
-	<div id="main-content-container">
+	<div id="main-content-container" class="grid grid-2">
 		<div id="main-content-inner">
 		
 			<h1><?php  echo $c->getCollectionName(); ?></h1>

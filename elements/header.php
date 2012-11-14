@@ -5,12 +5,15 @@
 Version: 3.0
 URL: http://stuffandnonsense.co.uk/projects/320andup/
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+Concrete 5 port Mario Noble Version 0.1
+
 -->
 <!-- HTML5 Boilerplate -->
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--><html lang="<?php echo LANGUAGE?>"><!--<![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
 
 
 <head>
@@ -33,11 +36,11 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 <link rel="stylesheet" media="screen" type="text/css" href="<?php  echo $this->getStyleSheet('C5_tinymce.css')?>" />
 
 <!--[if (lt IE 9) & (!IEMobile)]>
-<script src="<?php  echo $this->getThemePath(); ?>js/selectivizr-min.js"></script>
+<script src="<?php  echo $this->getThemePath(); ?>/js/selectivizr-min.js"></script>
 <![endif]-->
 
 <!-- JavaScript -->
-<script src="<?php  echo $this->getThemePath(); ?>js/modernizr-2.5.3-min.js"></script>
+<script src="<?php  echo $this->getThemePath(); ?>/js/modernizr-2.5.3-min.js"></script>
 
 <!-- Icons -->
 
