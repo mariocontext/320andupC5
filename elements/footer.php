@@ -4,32 +4,44 @@
 	
 		<div id="footer-inner">
 
-		<span class="return-to-top"><a href="#main-container">Return to Top</a></span>
-		<?php
-		/* needs Pretty Urls activated http://www.concrete5.org/documentation/using-concrete5/dashboard/system-and-maintenance/seo-and-statistics/pretty-urls/ or copy and paste direct link into anchor link below */
-		?>	
-		<span class="go-to-sitemap"><a href="<?php print DIR_REL; ?>/sitemap">View Sitemap</a></span>
-		
-			<p class="footer-sign-in">
-			<?php  
-			$u = new User();
-			if ($u->isRegistered()) { ?>
-				<?php   
-				if (Config::get("ENABLE_USER_PROFILES")) {
-					$userName = '<a href="' . $this->url('/profile') . '">' . $u->getUserName() . '</a>';
-				} else {
-					$userName = $u->getUserName();
-				}
+			<div id="footer-custom">
+
+				<?php  
+				$a = new GlobalArea('Custom Footer');
+				$a->display();
+				$a->setBlockWrapperStart('<div class="grid-element">');
+    			$a->setBlockWrapperEnd('</div>')
 				?>
-				<span class="sign-in"><?php  echo t('Currently logged in as <b>%s</b>.', $userName)?> <a href="<?php  echo $this->url('/login', 'logout')?>"><?php  echo t('Sign Out')?></a></span>
-			<?php   } else { ?>
-				<span class="sign-in"><a href="<?php  echo $this->url('/login')?>"><?php  echo t('Sign In to Edit this Site')?></a></span>
-			<?php   } ?>
-			</p>
-	
-			<p class="footer-copyright" class="clearfix">&copy;<?php  echo date('Y')?> <?php  echo SITE?>.</p>
+
+			</div><!-- /footer-custom -->
+
+			<div class="return-to-top"><a href="#main-container">Return to Top</a></div>
+			<?php
+			/* needs Pretty Urls activated http://www.concrete5.org/documentation/using-concrete5/dashboard/system-and-maintenance/seo-and-statistics/pretty-urls/ or copy and paste direct link into anchor link below */
+			?>	
+			<div class="go-to-sitemap"><a href="<?php print DIR_REL; ?>/sitemap">View Sitemap</a></div>
 			
-	
+				<p class="footer-sign-in">
+				<?php  
+				$u = new User();
+				if ($u->isRegistered()) { ?>
+					<?php   
+					if (Config::get("ENABLE_USER_PROFILES")) {
+						$userName = '<a href="' . $this->url('/profile') . '">' . $u->getUserName() . '</a>';
+					} else {
+						$userName = $u->getUserName();
+					}
+					?>
+					<span class="sign-in"><?php  echo t('Currently logged in as <b>%s</b>.', $userName)?> <a href="<?php  echo $this->url('/login', 'logout')?>"><?php  echo t('Sign Out')?></a></span>
+				<?php   } else { ?>
+					<span class="sign-in"><a href="<?php  echo $this->url('/login')?>"><?php  echo t('Sign In to Edit this Site')?></a></span>
+				<?php   } ?>
+				</p>
+
+		
+				<p class="footer-copyright" class="clearfix">&copy;<?php  echo date('Y')?> <?php  echo SITE?>.</p>
+				
+		
 		</div><!-- /footer-inner -->
 	
 	</div><!-- /footer main -->
