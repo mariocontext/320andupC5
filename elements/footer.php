@@ -3,6 +3,12 @@
 	<footer id="footer-main" class="clearfix" role="contentinfo">
 	
 		<div id="footer-inner">
+
+		<span class="return-to-top"><a href="#main-container">Return to Top</a></span>
+		<?php
+		/* needs Pretty Urls activated http://www.concrete5.org/documentation/using-concrete5/dashboard/system-and-maintenance/seo-and-statistics/pretty-urls/ or copy and paste direct link into anchor link below */
+		?>	
+		<span class="go-to-sitemap"><a href="<?php print DIR_REL; ?>/sitemap">View Sitemap</a></span>
 		
 			<p class="footer-sign-in">
 			<?php  

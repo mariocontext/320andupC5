@@ -7,10 +7,15 @@ $this->inc('elements/header.php'); ?>
 
 	<div id="main-content-container" class="grid grid-1">
 		<div id="main-content-inner">
+
+		<h1><?php  echo $c->getCollectionName(); ?></h1>
 		
 			<?php  
 			$a = new Area('Main');
 			$a->display($c);
+			$a->setBlockWrapperStart('<div class="grid-element">');
+    		$a->setBlockWrapperEnd('</div>');
+    		/* you can hardcode in the the content editor or plugins, grid-a, grid-b, grid-c etc to stack elements */
 			?>
 			
 		</div><!-- /main-content-inner -->
@@ -24,6 +29,8 @@ $this->inc('elements/header.php'); ?>
 			<?php  
 			$a = new Area('Sidebar');
 			$a->display($c);
+			$a->setBlockWrapperStart('<div class="grid-element">');
+    		$a->setBlockWrapperEnd('</div>')
 			?>
 			
 		</div><!-- /right-sidebar-inner -->

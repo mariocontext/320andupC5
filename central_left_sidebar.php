@@ -12,6 +12,8 @@ $this->inc('elements/header.php'); ?>
 			<?php  
 			$a = new Area('Sidebar');
 			$a->display($c);
+			$a->setBlockWrapperStart('<div class="grid-element">');
+    		$a->setBlockWrapperEnd('</div>')
 			?>
 			
 	</div><!-- /left-sidebar-inner -->
@@ -24,6 +26,8 @@ $this->inc('elements/header.php'); ?>
 				<?php  
 				$a = new Area('Central Sidebar');
 				$a->display($c);
+				$a->setBlockWrapperStart('<div class="grid-element">');
+    			$a->setBlockWrapperEnd('</div>')
 				?>
 				
 		</div><!-- /central-sidebar-inner -->
@@ -31,10 +35,14 @@ $this->inc('elements/header.php'); ?>
 
 	<div id="main-content-container" class="grid grid-3">
 		<div id="main-content-inner">
+
+			<h1><?php  echo $c->getCollectionName(); ?></h1>
 		
 			<?php  
 			$a = new Area('Main');
 			$a->display($c);
+			$a->setBlockWrapperStart('<div class="grid-element">');
+    		$a->setBlockWrapperEnd('</div>')
 			?>
 			
 		</div><!-- /main-content-inner -->

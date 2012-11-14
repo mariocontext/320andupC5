@@ -4,13 +4,14 @@ $this->inc('elements/header.php');
 $nav = Loader::helper('navigation');
 ?>
 
+
 	<div id="header-image">
 		
 		<div id="featured-image-full">
 			<?php 
 			
 			if ($c->isEditMode()) {
-				print '<br><br>';
+				print '<br /><br />';
 				$a = new Area('Thumbnail Image');
 				$a->display($c);
 			}
@@ -30,6 +31,8 @@ $nav = Loader::helper('navigation');
 			<?php  
 			$a = new Area('Sidebar');
 			$a->display($c);
+			$a->setBlockWrapperStart('<div class="grid-element">');
+    		$a->setBlockWrapperEnd('</div>')
 			?>
 			
 		</div><!-- /left-sidebar-inner -->
@@ -44,6 +47,8 @@ $nav = Loader::helper('navigation');
 			<?php  
 			$a = new Area('Main');
 			$a->display($c);
+			$a->setBlockWrapperStart('<div class="grid-element">');
+    		$a->setBlockWrapperEnd('</div>')
 			?>
 			
 			<div id="main-content-post-author">

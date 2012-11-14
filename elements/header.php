@@ -6,7 +6,7 @@ Version: 3.0
 URL: http://stuffandnonsense.co.uk/projects/320andup/
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
-Concrete 5 port Mario Noble Version 0.1
+Port to Concrete 5 - Mario Noble Version 0.1.0
 
 -->
 <!-- HTML5 Boilerplate -->
@@ -84,6 +84,13 @@ Concrete 5 port Mario Noble Version 0.1
 
 <body class="clearfix">
 
+	<body id="<?php  echo $c->getCollectionTypeHandle() ?>" class="page<?php  echo $c->getCollectionID() ?> clearfix" <?php 
+global $cp;
+if (is_object($cp) && ($cp->canWrite() || $cp->canAddSubContent() || $cp->canAdminPage())) {
+	echo ' style="margin:70px 2% 2% !important;"';
+}
+?>>
+
 <!--start main container -->
 
 <div id="main-container">
@@ -96,10 +103,26 @@ Concrete 5 port Mario Noble Version 0.1
 		$a->display();
 		?>
 
+		<nav>
 		<?php  
 		$a = new GlobalArea('Header Nav');
 		$a->display();
 		?>
+
+		<!-- 
+
+		 use code below (enclosing in php tags) instead of global nav above to harcode the nav and not allow site admins to change it on their own
+
+		    $bt_nav = BlockType::getByHandle('autonav');
+		    $bt_nav->controller->displayPages = 'top';
+		    $bt_nav->controller->orderBy = 'display_asc';
+		    $bt_nav->controller->displaySubPages = 'none';
+		    $bt_nav->render('templates/header_menu');
+		
+        <div class="clearboth">&nbsp;</div>
+
+    	-->
+    	</nav>
 		
 		<div id="header-image">
 		
@@ -113,3 +136,15 @@ Concrete 5 port Mario Noble Version 0.1
 	</header><!-- main header area -->
 	
 	<div class="clearfix"></div>
+
+	<!-- comment out to remove breadcrumbs -->
+    <div id="320-breadcrumbs">
+	        <?php 
+	        $bt = BlockType::getByHandle('autonav');
+	        $bt->controller->displayPages = 'top';
+	        $bt->controller->orderBy = 'display_asc';                    
+	        $bt->controller->displaySubPages = 'relevant_breadcrumb';
+			$bt->controller->displaySubPageLevels = 'all';
+	        $bt->render('templates/breadcrumb');
+	        ?>
+    </div><!-- /breadcrumbs -->
