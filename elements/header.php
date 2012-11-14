@@ -30,7 +30,7 @@ Port to Concrete 5 - Mario Noble Version 0.1.0
 
 <!-- Site Header Content //-->
 
-<link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/320andup-scss-compass.css" />
+<link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/320andup.css" />
 <link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/text.css" />
 <link rel="stylesheet" media="screen" type="text/css" href="<?php  echo $this->getStyleSheet('typography.css')?>" />
 <link rel="stylesheet" media="screen" type="text/css" href="<?php  echo $this->getStyleSheet('C5_tinymce.css')?>" />
@@ -103,7 +103,7 @@ if (is_object($cp) && ($cp->canWrite() || $cp->canAddSubContent() || $cp->canAdm
 		$a->display();
 		?>
 
-		<nav>
+		<nav id="header-nav">
 		<?php  
 		$a = new GlobalArea('Header Nav');
 		$a->display();

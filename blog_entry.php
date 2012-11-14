@@ -27,6 +27,8 @@ $nav = Loader::helper('navigation');
 	<div id="left-sidebar-container" class="grid grid-1">
 
 		<div id="left-sidebar-inner">
+
+			<aside role="complementary">
 		
 			<?php  
 			$a = new Area('Sidebar');
@@ -34,6 +36,8 @@ $nav = Loader::helper('navigation');
 			$a->setBlockWrapperStart('<div class="grid-element">');
     		$a->setBlockWrapperEnd('</div>')
 			?>
+
+			</aside><!-- /left-sidebar-inner aside -->
 			
 		</div><!-- /left-sidebar-inner -->
 	
@@ -41,8 +45,10 @@ $nav = Loader::helper('navigation');
 
 	<div id="main-content-container" class="grid grid-2">
 		<div id="main-content-inner">
-		
+		<article role="main">
+			
 			<h1><?php  echo $c->getCollectionName(); ?></h1>
+			
 		
 			<?php  
 			$a = new Area('Main');
@@ -75,7 +81,7 @@ $nav = Loader::helper('navigation');
 					</div><!-- /main-content-post-footer-share -->
 				</p>	
 			</div><!-- /main-content-post-author -->
-			
+		</article>	
 		</div><!-- /main-content-inner -->
 	
 	</div><!-- /main-content-container -->

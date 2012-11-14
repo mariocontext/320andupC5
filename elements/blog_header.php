@@ -30,7 +30,7 @@ Port to Concrete 5 - Mario Noble Version 0.1.0
 
 <!-- Site Header Content //-->
 
-<link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/320andup-scss-compass.css" />
+<link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/320andup.css" />
 <link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/text.css" />
 <link rel="stylesheet" media="screen" type="text/css" href="<?php  echo $this->getStyleSheet('typography.css')?>" />
 <link rel="stylesheet" media="screen" type="text/css" href="<?php  echo $this->getStyleSheet('C5_tinymce.css')?>" />
@@ -97,13 +97,15 @@ if (is_object($cp) && ($cp->canWrite() || $cp->canAddSubContent() || $cp->canAdm
 
 	<header role="banner" class="clearfix">
 
-	
+
+		<div id="branding">
 		<?php  
 		$a = new GlobalArea('Site Name');
 		$a->display();
 		?>
+		</div><!-- /branding -->
 
-		<nav>
+		<nav id="header-nav" role="navigation">
 		<?php  
 		$a = new GlobalArea('Header Nav');
 		$a->display();
@@ -136,3 +138,17 @@ if (is_object($cp) && ($cp->canWrite() || $cp->canAddSubContent() || $cp->canAdm
 	</header><!-- main header area -->
 	
 	<div class="clearfix"></div>
+
+	<!-- comment out to remove breadcrumbs -->
+    <div id="320-breadcrumbs">
+    <nav role="navigation">
+	        <?php 
+	        $bt = BlockType::getByHandle('autonav');
+	        $bt->controller->displayPages = 'top';
+	        $bt->controller->orderBy = 'display_asc';                    
+	        $bt->controller->displaySubPages = 'relevant_breadcrumb';
+			$bt->controller->displaySubPageLevels = 'all';
+	        $bt->render('templates/breadcrumb');
+	        ?>
+	</nav><!-- /breadcrumb nav -->
+    </div><!-- /breadcrumbs -->

@@ -19,7 +19,7 @@
 			<?php
 			/* needs Pretty Urls activated http://www.concrete5.org/documentation/using-concrete5/dashboard/system-and-maintenance/seo-and-statistics/pretty-urls/ or copy and paste direct link into anchor link below */
 			?>	
-			<div class="go-to-sitemap"><a href="<?php print DIR_REL; ?>/sitemap">View Sitemap</a></div>
+			<div class="go-to-sitemap"><a href="<?php print DIR_REL; ?>/storage/sitemap">View Sitemap</a></div>
 			
 				<p class="footer-sign-in">
 				<?php  
@@ -50,7 +50,7 @@
 </div><!-- /end main container -->
 
 <!-- note - C5 loads jquery version 1.7.1 in the head automatically. 320andup plugins may require 1.7.2 since this is included in the latest Andy Clark update -->
-
+<script src="<?php  echo $this->getThemePath(); ?>/js/nav-toggler.js"></script>
 <script src="<?php  echo $this->getThemePath(); ?>/js/plugins.js"></script>
 <!-- your own custom scripts can go in script.js -->
 <script src="<?php  echo $this->getThemePath(); ?>/js/script.js"></script>

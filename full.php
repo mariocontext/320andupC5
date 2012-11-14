@@ -7,6 +7,7 @@ $this->inc('elements/header.php'); ?>
 
 	<div id="main-content-container" class="grid grid-1">
 		<div id="main-content-inner">
+		<section role="main">
 
 		<h1><?php  echo $c->getCollectionName(); ?></h1>
 		
@@ -16,7 +17,7 @@ $this->inc('elements/header.php'); ?>
 			$a->setBlockWrapperStart('<div class="grid-element">');
     		$a->setBlockWrapperEnd('</div>')
 			?>
-			
+		</section><!-- /main-content-inner section -->	
 		</div><!-- /main-content-inner -->
 	
 	</div><!-- /main-content-container -->

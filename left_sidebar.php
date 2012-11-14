@@ -8,21 +8,21 @@ $this->inc('elements/header.php'); ?>
 		<div id="left-sidebar-container" class="grid grid-1">
 
 		<div id="left-sidebar-inner">
-	
+		<aside role="complementary">
 			<?php  
 			$a = new Area('Sidebar');
 			$a->display($c);
 			$a->setBlockWrapperStart('<div class="grid-element">');
     		$a->setBlockWrapperEnd('</div>')
 			?>
-			
+		</aside><!-- / left-sidebar-inner aside -->	
 		</div><!-- /left-sidebar-inner -->
 	
 	</div><!-- /left-sidebar-container -->
 
 	<div id="main-content-container" class="grid grid-2">
 		<div id="main-content-inner">
-
+		<section role="main">
 			<h1><?php  echo $c->getCollectionName(); ?></h1>
 		
 			<?php  
@@ -31,7 +31,7 @@ $this->inc('elements/header.php'); ?>
 			$a->setBlockWrapperStart('<div class="grid-element">');
     		$a->setBlockWrapperEnd('</div>')
 			?>
-			
+		</section><!-- /main-content-inner section -->	
 		</div><!-- /main-content-inner -->
 	
 	</div><!-- /main-content-container -->
