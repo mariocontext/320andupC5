@@ -1,7 +1,6 @@
 <?php   defined('C5_EXECUTE') or die("Access Denied."); ?>
-<div class="clear"></div>
 	
-	<div id="footer">
+	<footer id="footer-main" class="clearfix" role="contentinfo">
 	
 		<div id="footer-inner">
 		
@@ -21,18 +20,24 @@
 				<span class="sign-in"><a href="<?php  echo $this->url('/login')?>"><?php  echo t('Sign In to Edit this Site')?></a></span>
 			<?php   } ?>
 			</p>
+	
+			<p class="footer-copyright" class="clearfix">&copy;<?php  echo date('Y')?> <?php  echo SITE?>.</p>
 			
-			<div class="clear"></div>
-			<p class="footer-copyright">&copy;<?php  echo date('Y')?> <?php  echo SITE?>.</p>
-			<p class="footer-tag-line"><?php echo t('Built with <a href="http://www.concrete5.org/" alt="Free Content Management System" target="_blank">concrete5 - an open source CMS')?></a></p>
 	
-		</div>
+		</div><!-- /footer-inner -->
 	
-	</div>
+	</div><!-- /footer main -->
 
-<!-- end main container -->
 
-</div>
+</div><!-- /end main container -->
+
+<!-- note - C5 loads jquery version 1.7.1 in the head automatically. 320andup plugins may require 1.7.2 since this is included in the latest Andy Clark update -->
+
+<script src="<?php  echo $this->getThemePath(); ?>/js/plugins.js"></script>
+<script src="<?php  echo $this->getThemePath(); ?>/js/script.js"></script>
+<script src="<?php  echo $this->getThemePath(); ?>/js/helper.js"></script>
+
+<!-- differs from general 320andup guidlines. add google analytics scripts via the c5 dashboard or add it in as per google's instructions as an included php file -->
 
 <?php   Loader::element('footer_required'); ?>
 

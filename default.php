@@ -2,9 +2,9 @@
 defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php'); ?>
 	
-	<div class="clear"></div>
+<div id="general-content" class="content clearfix">
 
-	<div id="main-content-container" class="grid_16">
+	<div id="main-content-container">
 		<div id="main-content-inner">
 		
 			<?php  
@@ -12,11 +12,11 @@ $this->inc('elements/header.php'); ?>
 			$a->display($c);
 			?>
 			
-		</div>
+		</div><!-- /main-content-inner -->
 	
-	</div>
+	</div><!-- /main-content-container -->
 
-	<div id="right-sidebar-container" class="grid_8">
+	<div id="right-sidebar-container">
 
 		<div id="right-sidebar-inner">
 	
@@ -25,10 +25,11 @@ $this->inc('elements/header.php'); ?>
 			$a->display($c);
 			?>
 			
-		</div>
+		</div><!-- /right-sidebar-inner -->
 	
-	</div>
+	</div><!-- /right-sidebar-container -->
 	
-	<!-- end sidebar -->
+
+</div><!-- /general-content -->
 	
 <?php  $this->inc('elements/footer.php'); ?>
