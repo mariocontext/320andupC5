@@ -9,29 +9,37 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 Port to Concrete 5 - Mario Noble Version 0.1.0
 
 -->
+
+<?php
+/* NOTE: header.php and blog_header.php in this folder need to match(elements) */
+?>
+
 <!-- HTML5 Boilerplate -->
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
-
+<?php
+/* could include below in html tag - not doing so to make more flexibile for multilanguage sites
+lang="<?php echo LANGUAGE?>"
+*/
+?>
 
 <head>
 
-<?php   Loader::element('header_required'); ?>
-
 <meta charset="utf-8">
+
+<?php   Loader::element('header_required'); ?>
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
-
-<link rel="shortcut icon" href="<?php  echo $this->getThemePath(); ?>/favicon.ico">
+<!-- include if you want favicon see also alternate links farther down 
+<link rel="shortcut icon" href="<?php  echo $this->getThemePath(); ?>/favicon.ico"> -->
 
 <!-- Site Header Content //-->
 
 <link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/320andup.css" />
-<link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/text.css" />
 <link rel="stylesheet" media="screen" type="text/css" href="<?php  echo $this->getStyleSheet('typography.css')?>" />
 <link rel="stylesheet" media="screen" type="text/css" href="<?php  echo $this->getStyleSheet('C5_tinymce.css')?>" />
 
@@ -44,10 +52,10 @@ Port to Concrete 5 - Mario Noble Version 0.1.0
 
 <!-- Icons -->
 
-<!-- 16x16 -->
-<link rel="shortcut icon" href="<?php  echo $this->getThemePath(); ?>/favicon.ico">
-<!-- 32x32 -->
-<link rel="shortcut icon" href="<?php  echo $this->getThemePath(); ?>/favicon.png">
+<!-- 16x16 
+<link rel="shortcut icon" href="<?php  echo $this->getThemePath(); ?>/favicon.ico"> -->
+<!-- 32x32 
+<link rel="shortcut icon" href="<?php  echo $this->getThemePath(); ?>/favicon.png"> -->
 <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
 <!-- <link rel="apple-touch-icon-precomposed" href="<?php  echo $this->getThemePath(); ?>/img/apple-touch-icon-precomposed.png"> -->
 <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
@@ -82,9 +90,7 @@ Port to Concrete 5 - Mario Noble Version 0.1.0
 
 </head>
 
-<body class="clearfix">
-
-	<body id="<?php  echo $c->getCollectionTypeHandle() ?>" class="page<?php  echo $c->getCollectionID() ?> clearfix" <?php 
+<body id="page<?php  echo $c->getCollectionID() ?>" class="<?php  echo $c->getCollectionTypeHandle() ?> clearfix" <?php 
 global $cp;
 if (is_object($cp) && ($cp->canWrite() || $cp->canAddSubContent() || $cp->canAdminPage())) {
 	echo ' style="margin:70px 2% 2% !important;"';
@@ -103,15 +109,15 @@ if (is_object($cp) && ($cp->canWrite() || $cp->canAddSubContent() || $cp->canAdm
 		$a->display();
 		?>
 
-		<nav id="header-nav">
+		<nav id="header-nav" role="navigation">
 		<?php  
 		$a = new GlobalArea('Header Nav');
 		$a->display();
 		?>
 
-		<!-- 
-
-		 use code below (enclosing in php tags) instead of global nav above to harcode the nav and not allow site admins to change it on their own
+		<?php
+		/*
+		 alternate nav example: use code below (enclosing in php tags) instead of global nav above to harcode the nav and not allow site admins to change it on their own
 
 		    $bt_nav = BlockType::getByHandle('autonav');
 		    $bt_nav->controller->displayPages = 'top';
@@ -120,8 +126,8 @@ if (is_object($cp) && ($cp->canWrite() || $cp->canAddSubContent() || $cp->canAdm
 		    $bt_nav->render('templates/header_menu');
 		
         <div class="clearboth">&nbsp;</div>
-
-    	-->
+		*/
+    	?>
     	</nav>
 		
 		<div id="header-image">
@@ -135,10 +141,9 @@ if (is_object($cp) && ($cp->canWrite() || $cp->canAddSubContent() || $cp->canAdm
 		
 	</header><!-- main header area -->
 	
-	<div class="clearfix"></div>
 
 	<!-- comment out to remove breadcrumbs -->
-    <div id="320-breadcrumbs">
+    <div id="320-breadcrumbs" class="clearfix">
 	        <?php 
 	        $bt = BlockType::getByHandle('autonav');
 	        $bt->controller->displayPages = 'top';

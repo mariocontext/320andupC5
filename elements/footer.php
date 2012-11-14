@@ -39,12 +39,12 @@
 				</p>
 
 		
-				<p class="footer-copyright" class="clearfix">&copy;<?php  echo date('Y')?> <?php  echo SITE?>.</p>
+				<p class="footer-copyright clearfix">&copy;<?php  echo date('Y')?> <?php  echo SITE?>.</p>
 				
 		
 		</div><!-- /footer-inner -->
 	
-	</div><!-- /footer main -->
+	</footer><!-- /footer main -->
 
 
 </div><!-- /end main container -->
