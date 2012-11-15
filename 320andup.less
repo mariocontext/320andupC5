@@ -111,3 +111,32 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 //custom overrides and tweaks for c5 and other basics v4
 @import "custom.less";
+
+/* temp working overrides so for easy development v3 */
+
+//removed body div selector from reset.less in favor of just div
+
+/* tweaks */
+
+#main-container {
+	padding-left:20px;
+	padding-right:20px;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+/* overrides */
+
+ul, ol {
+margin: 0 0 1.5em 0px
+}
+
+img {
+
+height: auto;
+
+}
+ // removed table hover effect in tables.less - this was effecting forms and can be an interactive cue for noninteractive elements. removed td borders as well with parameters
+
+
+

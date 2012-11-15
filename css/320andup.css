@@ -9,7 +9,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Reset =================================================== */
 html,
 body,
-body div,
+div,
 span,
 object,
 iframe,
@@ -1812,12 +1812,26 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   background-color: transparent;
+  /*
+tbody + tbody {
+border-top : @tableborderwidth * 2 @tableborderstyle @tableborder; }
+
+tbody tr td,
+tbody tr th {
+.transition(background-color .25s 0 linear); }
+
+tbody tr:hover td,
+tbody tr:hover th {
+background-color : @tablehover; }
+*/
+
 }
 table th,
 table td {
   padding: 8px;
   vertical-align: top;
-  border-top: 1px solid #8c9bab;
+  /* border-top : @tableborderwidth @tableborderstyle @tableborder; */
+
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 1.5em;
@@ -1834,21 +1848,6 @@ table colgroup + thead tr:first-child td,
 table thead:first-child tr:first-child th,
 table thead:first-child tr:first-child td {
   border-top: 0;
-}
-table tbody + tbody {
-  border-top: 2px solid #8c9bab;
-}
-table tbody tr td,
-table tbody tr th {
-  -webkit-transition: background-color 0.25s 0 linear;
-  -moz-transition: background-color 0.25s 0 linear;
-  -ms-transition: background-color 0.25s 0 linear;
-  -o-transition: background-color 0.25s 0 linear;
-  transition: background-color 0.25s 0 linear;
-}
-table tbody tr:hover td,
-table tbody tr:hover th {
-  background-color: #a9b4c1;
 }
 .table-condensed th,
 .table-condensed td {
@@ -2086,4 +2085,20 @@ table tbody tr:hover th {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /* Styles */
 }
-/* basic tweaks and c5 overrides */
+/* basic tweaks and c5 overrides v3 */
+/* temp working overrides so for easy development v3 */
+/* tweaks */
+#main-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+/* overrides */
+ul,
+ol {
+  margin: 0 0 1.5em 0px;
+}
+img {
+  height: auto;
+}
