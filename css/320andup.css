@@ -113,6 +113,21 @@ section {
   overflow: visible;
 }
 /* Page =================================================== */
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
 html {
   background: #ffffff;
   font-size: 62.5%;
@@ -1393,7 +1408,6 @@ select[size] {
 }
 textarea {
   resize: vertical;
-  overflow: auto;
   height: auto;
   overflow: auto;
   vertical-align: top;
@@ -2072,3 +2086,4 @@ table tbody tr:hover th {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /* Styles */
 }
+/* basic tweaks and c5 overrides */
