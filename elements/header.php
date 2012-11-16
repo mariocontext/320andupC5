@@ -91,7 +91,7 @@ lang="<?php echo LANGUAGE?>"
 
 </head>
 
-<body id="page<?php  echo $c->getCollectionID() ?>" class="<?php  echo $c->getCollectionTypeHandle() ?> clearfix" <?php 
+<body id="page<?php  echo $c->getCollectionID() ?>" class="<?php  echo $c->getCollectionTypeHandle() ?>-layout clearfix" <?php 
 global $cp;
 if (is_object($cp) && ($cp->canWrite() || $cp->canAddSubContent() || $cp->canAdminPage())) {
 	echo ' style="margin:70px 2% 2% !important;"';
