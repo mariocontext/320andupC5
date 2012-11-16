@@ -50,9 +50,9 @@
 </div><!-- /end main container -->
 
 <!-- note - C5 loads jquery version 1.7.1 in the head automatically. 320andup plugins may require 1.7.2 since this is included in the latest Andy Clark update -->
-<script src="<?php  echo $this->getThemePath(); ?>/js/nav-toggler.js"></script>
 <script src="<?php  echo $this->getThemePath(); ?>/js/plugins.js"></script>
 <!-- your own custom scripts can go in script.js -->
+<script src="<?php  echo $this->getThemePath(); ?>/js/nav-toggler.js"></script>
 <script src="<?php  echo $this->getThemePath(); ?>/js/script.js"></script>
 <script src="<?php  echo $this->getThemePath(); ?>/js/helper.js"></script>
 

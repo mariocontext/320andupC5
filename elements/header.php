@@ -49,7 +49,7 @@ lang="<?php echo LANGUAGE?>"
 
 <!-- JavaScript -->
 <script src="<?php  echo $this->getThemePath(); ?>/js/modernizr-2.5.3-min.js"></script>
-<script src="<?php  echo $this->getThemePath(); ?>/js/nav-toggler.js"></script>
+
 
 <!-- Icons -->
 

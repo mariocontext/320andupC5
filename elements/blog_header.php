@@ -49,7 +49,7 @@ lang="<?php echo LANGUAGE?>"
 
 <!-- JavaScript -->
 <script src="<?php  echo $this->getThemePath(); ?>/js/modernizr-2.5.3-min.js"></script>
-<script src="<?php  echo $this->getThemePath(); ?>/js/nav-toggler.js"></script>
+
 
 <!-- Icons -->
 
@@ -111,7 +111,7 @@ if (is_object($cp) && ($cp->canWrite() || $cp->canAddSubContent() || $cp->canAdm
 		?>
 		</span>
 
-		<nav id="header-nav" role="navigation">
+		<nav id="header-nav" role="navigation" class="clearfix">
 		<?php  
 		$a = new GlobalArea('Header Nav');
 		$a->display();
