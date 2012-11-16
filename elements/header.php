@@ -49,6 +49,7 @@ lang="<?php echo LANGUAGE?>"
 
 <!-- JavaScript -->
 <script src="<?php  echo $this->getThemePath(); ?>/js/modernizr-2.5.3-min.js"></script>
+<script src="<?php  echo $this->getThemePath(); ?>/js/nav-toggler.js"></script>
 
 <!-- Icons -->
 
@@ -103,13 +104,14 @@ if (is_object($cp) && ($cp->canWrite() || $cp->canAddSubContent() || $cp->canAdm
 
 	<header role="banner" class="clearfix">
 
-	
+		<span id="logo-area">
 		<?php  
 		$a = new GlobalArea('Site Name');
 		$a->display();
 		?>
+		</span>
 
-		<nav id="header-nav" role="navigation">
+		<nav id="header-nav" role="navigation" class="clearfix">
 		<?php  
 		$a = new GlobalArea('Header Nav');
 		$a->display();
@@ -143,7 +145,7 @@ if (is_object($cp) && ($cp->canWrite() || $cp->canAddSubContent() || $cp->canAdm
 	
 
 	<!-- comment out to remove breadcrumbs -->
-    <div id="320-breadcrumbs" class="clearfix">
+    <div id="breadcrumbs-threetwenty" class="clearfix">
 	        <?php 
 	        $bt = BlockType::getByHandle('autonav');
 	        $bt->controller->displayPages = 'top';
