@@ -248,8 +248,8 @@ ul,
 dl,
 address {
   margin-bottom: 1.5em;
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 1.5em;
 }
 small {
@@ -746,7 +746,7 @@ a [class*=" icon-"] {
 /* makes the font 33% larger relative to the icon container */
 .icon-large:before {
   vertical-align: top;
-  font-size: 1.3333333333333333em;
+  font-size: 1.3333333333333332em;
 }
 .btn [class^="icon-"],
 .btn [class*=" icon-"] {
@@ -778,7 +778,7 @@ li[class*=" icon-"]:before {
 }
 li[class^="icon-"].icon-large:before,
 li[class*=" icon-"].icon-large:before {
-  text-indent: -1.3333333333333333em;
+  text-indent: -1.3333333333333332em;
 }
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
     readers do not read off random characters that represent icons */
@@ -1939,7 +1939,8 @@ table thead:first-child tr:first-child td {
 }
 @media only screen and (min-width: 1382px) {
   /* 1382 =================================================== */
-  body {
+  #main-container {
+    width: 1250px;
     max-width: 1440px;
   }
 }
