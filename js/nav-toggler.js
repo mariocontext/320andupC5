@@ -1,4 +1,8 @@
 
+var myDeviceWidth = $(document).width();
+
+if (myDeviceWidth <= 600) {
+
 $('#header-nav ul li').first().prepend("<li><a href='#' class='nav-toggler'>+ Open Navigation </a></li>");
 $('#header-nav ul li a').css("display","none");
 $('#header-nav ul li a.nav-toggler').css("display","block");
@@ -15,5 +19,11 @@ $('.nav-toggler').toggle(function() {
 
 	}
 );
+
+} else {
+
+	// do nothing
+
+}
 
 

@@ -1925,11 +1925,135 @@ table thead:first-child tr:first-child td {
     page-break-inside: avoid;
   }
 }
+/* basic tweaks and c5 overrides v3 */
+/* temp working overrides so for easy development v3 */
+/* tweaks */
+#main-container {
+  padding: 20px;
+  margin: 0 auto;
+}
+/* overrides */
+ul,
+ol {
+  margin: 0 0 1.5em 0px;
+  padding-left: 0;
+  list-style-position: inside;
+}
+img {
+  height: auto;
+}
+/* c5 theme tweaks */
+/* js driven drop down - degrades to a simple list with no js */
+#logo-area a {
+  font-size: 40px;
+  font-size: 4rem;
+}
+#header-nav {
+  text-decoration: none;
+  text-align: left;
+}
+#header-nav ul {
+  list-style: none;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+#header-nav li a {
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-color: #e6e6e6;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  margin-top: .25rem;
+  border: 1px solid #c7ced6;
+  padding: 1rem;
+  display: none;
+}
+/* breadcrumbs */
+#page1 #breadcrumbs-threetwenty {
+  display: none;
+}
+#breadcrumbs-threetwenty {
+  margin: 2rem 0px;
+}
+/* main content */
+#general-content {
+  margin: 4rem 0;
+}
+/* footer tweaks */
+.return-to-top a,
+.go-to-sitemap a {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-color: #e6e6e6;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  margin: 1rem 0;
+  border: 1px solid #c7ced6;
+  display: block;
+  text-decoration: none;
+  padding: 1rem;
+}
+.footer-sign-in {
+  display: none !important;
+  visibility: hidden;
+}
 @media only screen and (min-width: 480px) {
   /* 480 =================================================== */
 }
 @media only screen and (min-width: 600px) {
   /* 600 =================================================== */
+  #header-nav .nav-toggler {
+    display: none;
+  }
+  #header-nav {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-color: #e6e6e6;
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  #header-nav ul {
+    list-style: none;
+    clear: left;
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    text-align: center;
+  }
+  #header-nav ul li {
+    display: block;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    right: 50%;
+  }
+  #header-nav ul li a {
+    display: block;
+    margin: 0 0 .1rem .1rem;
+    padding: 1rem;
+    text-decoration: none;
+    line-height: 2rem;
+    font-size: 1.8rem;
+    border: none;
+  }
 }
 @media only screen and (min-width: 768px) {
   /* 768 =================================================== */
@@ -2085,83 +2209,4 @@ table thead:first-child tr:first-child td {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /* Styles */
-}
-/* basic tweaks and c5 overrides v3 */
-/* temp working overrides so for easy development v3 */
-/* tweaks */
-#main-container {
-  padding: 20px;
-  margin: 0 auto;
-}
-/* overrides */
-ul,
-ol {
-  margin: 0 0 1.5em 0px;
-  padding-left: 0;
-  list-style-position: inside;
-}
-img {
-  height: auto;
-}
-/* c5 theme tweaks */
-/* js driven drop down - degrades to a simple list with no js */
-#logo-area a {
-  font-size: 40px;
-  font-size: 4rem;
-}
-#header-nav {
-  text-decoration: none;
-  text-align: left;
-}
-#header-nav ul {
-  list-style: none;
-  font-size: 18px;
-  font-size: 1.8rem;
-}
-#header-nav li a {
-  text-decoration: none;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-color: #e6e6e6;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(top, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  margin-top: .25rem;
-  border: 1px solid #c7ced6;
-  padding: 1rem;
-  display: none;
-}
-/* breadcrumbs */
-#page1 #breadcrumbs-threetwenty {
-  display: none;
-}
-#breadcrumbs-threetwenty {
-  margin: 2rem 0px;
-}
-/* main content */
-#general-content {
-  margin: 4rem 0;
-}
-/* footer tweaks */
-.return-to-top a,
-.go-to-sitemap a {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-color: #e6e6e6;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(top, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  margin: 1rem 0;
-  border: 1px solid #c7ced6;
-  display: block;
-  text-decoration: none;
-  padding: 1rem;
-}
-.footer-sign-in {
-  display: none !important;
-  visibility: hidden;
 }
