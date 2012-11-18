@@ -746,7 +746,7 @@ a [class*=" icon-"] {
 /* makes the font 33% larger relative to the icon container */
 .icon-large:before {
   vertical-align: top;
-  font-size: 1.3333333333333332em;
+  font-size: 1.3333333333333333em;
 }
 .btn [class^="icon-"],
 .btn [class*=" icon-"] {
@@ -778,7 +778,7 @@ li[class*=" icon-"]:before {
 }
 li[class^="icon-"].icon-large:before,
 li[class*=" icon-"].icon-large:before {
-  text-indent: -1.3333333333333332em;
+  text-indent: -1.3333333333333333em;
 }
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
     readers do not read off random characters that represent icons */
