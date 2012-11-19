@@ -1940,7 +1940,7 @@ ol {
   list-style-position: inside;
 }
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 /* c5 theme tweaks */
@@ -2010,9 +2010,6 @@ img {
 }
 @media only screen and (min-width: 600px) {
   /* 600 =================================================== */
-  #header-nav .nav-toggler {
-    display: none;
-  }
   #header-nav {
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
     background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
@@ -2026,6 +2023,9 @@ img {
     width: 100%;
     overflow: hidden;
     position: relative;
+  }
+  #header-nav .nav-toggler {
+    display: none;
   }
   #header-nav ul {
     list-style: none;
@@ -2061,6 +2061,9 @@ img {
 }
 @media only screen and (min-width: 992px) {
   /* 992 =================================================== */
+  #main-container {
+    width: 960px;
+  }
 }
 @media only screen and (min-width: 1382px) {
   /* 1382 =================================================== */

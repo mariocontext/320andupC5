@@ -95,7 +95,7 @@ list-style-position: inside;
 }
 
 img {
-width: 100%;
+max-width: 100%; // at 600px or higher switches to auto
 height: auto;
 
 }
@@ -164,11 +164,13 @@ display: none;
 
 }
 
+//plug-in tweaks
+
+
 // made change to 1382.less - moved max-width to main-container from body - plays better on larger screens sizes
 // change to typography.less p, ol, ul, dl, address tags to be 18 size
 
 // 480px
-
 
 @media only screen and (min-width: 480px) {
 @import "480.less";
@@ -177,7 +179,7 @@ display: none;
 
 // 600px
 
-// added various styles
+// added various style changes
 @media only screen and (min-width: 600px) {
 @import "600.less";
 }
@@ -191,6 +193,8 @@ display: none;
 @media only screen and (min-width: 992px) {
 @import "992.less";
 }
+
+//set width to 960px for main-container
 
 // 1382px
 @media only screen and (min-width: 1382px) {
