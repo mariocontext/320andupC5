@@ -53,8 +53,10 @@
 <script src="<?php  echo $this->getThemePath(); ?>/js/plugins.js"></script>
 <!-- your own custom scripts can go in script.js -->
 <script src="<?php  echo $this->getThemePath(); ?>/js/nav-toggler.js"></script>
+<script src="<?php  echo $this->getThemePath(); ?>/js/jquery.fitvids.js"></script>
 <script src="<?php  echo $this->getThemePath(); ?>/js/script.js"></script>
 <script src="<?php  echo $this->getThemePath(); ?>/js/helper.js"></script>
+
 
 <!-- differs from general 320andup guidlines. add google analytics scripts via the c5 dashboard or add it in as per google's instructions as an included php file -->
 
