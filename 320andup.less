@@ -127,14 +127,16 @@ height: auto;
 		margin-top:.25rem;
 		border:1px solid @bordercolor;
 		padding: 1rem;
-		display: none; // stops flicker of nav buttons showing - may cause problems with screen readers
+		display: none;  //stops flicker of nav buttons showing - may cause problems with screen readers
+		
 	}
 
  }
 
+
 /* breadcrumbs */
 
-
+// stop from showing on homepage
 #page1 #breadcrumbs-threetwenty {
 
 display: none;
@@ -181,9 +183,16 @@ display: none;
 
 // added various styles
 
+@media only screen and (min-width: 599px) {
+
+
+}
+
 @media only screen and (min-width: 600px) {
 @import "600.less";
 }
+
+
 
 // 768px
 @media only screen and (min-width: 768px) {
@@ -194,8 +203,8 @@ display: none;
 @media only screen and (min-width: 992px) {
 @import "992.less";
 }
-
 //set width to 960px for main-container
+
 
 // 1382px
 @media only screen and (min-width: 1382px) {
