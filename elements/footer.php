@@ -56,6 +56,7 @@
 <script src="<?php  echo $this->getThemePath(); ?>/js/jquery.fitvids.js"></script>
 <script src="<?php  echo $this->getThemePath(); ?>/js/script.js"></script>
 <script src="<?php  echo $this->getThemePath(); ?>/js/helper.js"></script>
+<script src="<?php  echo $this->getThemePath(); ?>/js/respond.min.js"></script>
 
 
 <!-- differs from general 320andup guidlines. add google analytics scripts via the c5 dashboard or add it in as per google's instructions as an included php file -->
