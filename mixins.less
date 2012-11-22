@@ -305,3 +305,20 @@ column-rule-width : @columnRuleWidth; }
 	text-decoration:none;
 	padding: 1rem;
 }
+
+
+.cross-browser-padding(@padding-size){
+
+	@rem: (@padding-size / 10);
+	padding : @font-size * 1px;
+	padding : ~"@{rem}rem"; 
+
+}
+
+.cross-browser-margin(@margin-size){
+
+	@rem: (@margin-size / 10);
+	margin : @margin-size * 1px;
+	margin : ~"@{rem}rem"; 
+
+}
