@@ -27,7 +27,7 @@
 
 				.nav-toggler {
 
-					display:none;
+					display:none !important; /* turns off nav trigger */
 
 				}
 
@@ -56,14 +56,31 @@
 				}
 
 				ul li a {
-					display: block;
+					display: block !important;
+					margin: 0 0 1px 1px; // IE fix
 					margin: 0 0 .1rem .1rem;
-					padding: 2rem;
+					padding: 16px; // IE fix
+					padding: 1rem;
 					text-decoration: none;
-					line-height: 2rem;
-					font-size:1.8rem;
+					line-height: 16px;
+					line-height: 1rem;
+					.font-size(18);
 					border: none;
 				}
+
+		}
+
+		.return-to-top, .go-to-sitemap {
+
+			display: none;
+
+		}
+
+		/* c5 layout tweaks for above 600 */
+
+		.ccm-layout-table .ccm-layout-col {
+
+
 
 		}
 
